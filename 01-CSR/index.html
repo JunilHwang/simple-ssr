@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Client Side Rendering</title>
+</head>
+<body>
+<div id="app"></div>
+<script>
+  const todoItems = [
+    { id: 1, content: 'CSR을 만들어보자', activation: true },
+    { id: 2, content: 'CSR 코드 분할', activation: false },
+    { id: 3, content: 'SSR을 만들어보자', activation: false },
+  ];
+  const $app = document.querySelector('#app');
+  $app.innerHTML = `
+    <ul>
+      ${todoItems.map(({ id, content, activation }) => `
+        <li>
+          <input type="checkbox" ${activation ? 'checked' : ''} />
+          <span ${activation ? ' style="text-decoration: line-through;"' : ''}>${content}</span>
+        </li>
+      `).join('')}
+    </ul>
+  `
+</script>
+</body>
+</html>
