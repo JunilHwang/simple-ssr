@@ -15,17 +15,32 @@
     { id: 2, content: 'CSR 코드 분할', activation: false },
     { id: 3, content: 'SSR을 만들어보자', activation: false },
   ];
-  const $app = document.querySelector('#app');
-  $app.innerHTML = `
+
+  const TodoList = () => `
     <ul>
       ${todoItems.map(({ id, content, activation }) => `
-        <li>
+        <li data-id="${id}">
           <input type="checkbox" ${activation ? 'checked' : ''} />
           <span ${activation ? ' style="text-decoration: line-through;"' : ''}>${content}</span>
         </li>
       `).join('')}
     </ul>
-  `
+  `;
+
+  const render = () => {
+    const $app = document.querySelector('#app');
+    $app.innerHTML = TodoList();
+    $app.querySelectorAll('li').forEach(el => {
+      el.addEventListener('click', () => {
+        const { id } = el.dataset;
+        const selectedItem = todoItems.find(v => v.id === Number(id));
+        selectedItem.activation = !selectedItem.activation;
+        render();
+      })
+    });
+  }
+
+  render();
 </script>
 </body>
 </html>

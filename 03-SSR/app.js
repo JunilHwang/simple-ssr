@@ -5,12 +5,6 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.send(
-    render(`Hello World`)
-  );
-});
-
-app.get("/todo-list", (req, res) => {
-  res.send(
     render(TodoList())
   );
 });
