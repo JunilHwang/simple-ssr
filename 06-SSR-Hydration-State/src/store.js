@@ -1,5 +1,5 @@
 export const store = {
-  state: {
+  state: globalThis.state || {
     todoItems: [
       { id: 1, content: 'CSR을 만들어보자', activation: true },
       { id: 2, content: 'CSR 코드 분할', activation: false },

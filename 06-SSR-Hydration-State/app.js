@@ -15,10 +15,7 @@ app.put('/api/state', (req, res) => {
 
 app.get("/*", (req, res) => {
   res.send(
-    serverRenderer(App({
-      path: req.path,
-      state: store.state,
-    }))
+    serverRenderer(App({ path: req.path }), store.state)
   );
 });
 

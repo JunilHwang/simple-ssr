@@ -19,11 +19,7 @@ const Router = (path) => {
   return `Hello World`;
 }
 
-export const App = ({ path, state }) => {
-  if (state !== undefined) {
-    console.log({ state });
-    store.hydration(state);
-  }
+export const App = ({ path }) => {
   return `
     <header>
       <a href="/">SSR Tutorial</a>
