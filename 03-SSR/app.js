@@ -1,5 +1,6 @@
 import express from "express";
-import { TodoList, render } from "./src/render.js";
+import { TodoList } from "./src/components.js";
+import { render } from "./src/render.js";
 
 const app = express();
 
