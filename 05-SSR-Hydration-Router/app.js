@@ -1,6 +1,7 @@
 import express from "express";
 import { App } from "./src/components.js";
 import { serverRenderer } from "./src/ServerRenderer.js";
+import { store } from "./src/store.js";
 
 const app = express();
 
@@ -8,7 +9,9 @@ app.use("/src", express.static("./src"));
 
 app.get("/*", (req, res) => {
   res.send(
-    serverRenderer(App(req.path))
+    serverRenderer(App({
+      path: req.path,
+    }))
   );
 });
 
