@@ -27,7 +27,7 @@
     </ul>
   `;
 
-  const components = () => {
+  const render = () => {
     const $app = document.querySelector('#app');
     $app.innerHTML = TodoList();
     $app.querySelectorAll('li').forEach(el => {
