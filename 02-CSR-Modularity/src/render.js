@@ -1,6 +1,6 @@
 import { todoItems } from "./items.js";
 
-export const render = () => `
+export const TodoList = () => `
   <ul>
     ${todoItems.map(({ id, content, activation }) => `
       <li>

@@ -1,4 +1,4 @@
-import { render } from "./render.js";
+import { TodoList } from "./render.js";
 
 const $app = document.querySelector('#app');
-$app.innerHTML = render();
+$app.innerHTML = TodoList();
