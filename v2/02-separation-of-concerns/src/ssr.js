@@ -1,6 +1,6 @@
 import { TodoItems } from './components.js';
 
-export const generateHTML = (todoItems) => `
+export const generateHTML = (model) => `
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -8,7 +8,7 @@ export const generateHTML = (todoItems) => `
     <title>Todo List</title>
   </head>
   <body>
-    <div id="app">${TodoItems(todoItems)}</div>
+    <div id="app">${TodoItems(model.todoItems)}</div>
   </body>
   </html>
 `;
