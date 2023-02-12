@@ -1,0 +1,10 @@
+{
+  "name": "01",
+  "version": "0.0.0",
+  "main": "server.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "express": "latest"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "simple-ssr",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/junilhwang/simple-ssr.git",
+  "author": "junilhwang <junil.h@kakao.com>",
+  "license": "MIT",
+  "workspaces": [
+    "v1/**/*",
+    "v2/**/*"
+  ]
+}
