@@ -1,5 +1,5 @@
 {
-  "name": "05-csr-override",
+  "name": "06-sync-model-server-to-client",
   "version": "0.0.0",
   "main": "server.js",
   "type": "module",
