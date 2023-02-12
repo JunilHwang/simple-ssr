@@ -1,4 +1,4 @@
-import { TodoItems, Button } from './components.js';
+import { TodoList, Button } from './components.js';
 
 export const generateHTML = (model) => `
   <!DOCTYPE html>
@@ -11,7 +11,7 @@ export const generateHTML = (model) => `
     <div id="app">
       ${Button({ id: 'add', text: '아이템 추가' })}
       ${Button({ id: 'delete', text: '아이템 삭제' })}
-      ${TodoItems(model.todoItems)}
+      ${TodoList(model.todoItems)}
     </div>
     <script>
       document.querySelector('#add').onclick = () => {
