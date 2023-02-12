@@ -1,0 +1,13 @@
+{
+  "name": "02-separation-of-concerns",
+  "version": "0.0.0",
+  "main": "server.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}
